@@ -3678,6 +3678,8 @@ body .mdc-ripple-surface:hover:before {
     flex-wrap: wrap;
     flex: 1 1 auto;
     margin: 0;
+    justify-content: center;
+
   }
 }
 @media screen and (min-width: 1024px) {
@@ -3782,7 +3784,7 @@ body .mdc-ripple-surface:hover:before {
 
 .site-header-menu-toggle,
 .site-header-mobile-search-button,
-.site-header-cart {
+.site-header-actions {
   position: absolute;
   top: 10px;
   bottom: auto;
@@ -3793,21 +3795,33 @@ body .mdc-ripple-surface:hover:before {
   background-color: transparent;
   border: 0;
 }
+.site-header-actions{
+  right:0;
+}
+
 @media screen and (min-width: 1024px) {
   .site-header-menu-toggle,
 .site-header-mobile-search-button,
-.site-header-cart {
+.site-header-actions {
     top: 50%;
     bottom: 66px;
     margin-top: -18px;
   }
   .site-header-sticky--scrolled .site-header-menu-toggle,
 .site-header-sticky--scrolled .site-header-mobile-search-button,
-.site-header-sticky--scrolled .site-header-cart {
+.site-header-sticky--scrolled .site-header-actions {
     margin-top: -23px;
   }
 }
-
+@media screen and (min-width: 680px) {
+  .site-header-actions {
+    position: relative;
+    margin-top: 0;
+    top:auto;
+    bottom: auto;
+    margin-bottom: 0;
+  }
+}
 .site-header-menu-toggle--button,
 .site-header-mobile-search-button--button,
 .site-header-cart--button {
@@ -3847,6 +3861,7 @@ body .mdc-ripple-surface:hover:before {
   .site-header-menu-toggle {
     left: 15px;
     opacity: 0;
+    display: none;
     visibility: hidden;
     transition: opacity 125ms cubic-bezier(0, 0, 0.2, 1) 100ms;
   }
@@ -4140,16 +4155,21 @@ body .mdc-ripple-surface:hover:before {
   position: relative;
   z-index: 1;
 }
-
-@media screen and (min-width: 1024px) {
+/* @media screen and (min-width: 680px) { */
   .site-header-right {
     display: flex;
     height: 46px;
+    align-items: center;
+  }
+/* } */
+@media screen and (min-width: 680px) {
+  .site-header-right {
+    width: 40%;
+
   }
 }
-
 .site-header-actions__account-link {
-  margin-right: 60px;
+  margin-right: 30px;
 }
 
 .site-footer-wrapper {
@@ -13701,9 +13721,10 @@ html body .home-section--content .promo-mosaic--inner.promo-mosaic--compressed .
   top: -1px;
   right: -1px;
   left: -1px;
-  border: 1px solid {{ color_border | color_modify: 'alpha', 0.2 }};
+  border-bottom: 1px solid {{color_border}};
+  /* border: 1px solid {{ color_border | color_modify: 'alpha', 0.2 }}; */
   border-radius: 4px;
-  box-shadow: 0 2px 3px {{ color_border | color_modify: 'alpha', 0.11 }};
+  /* box-shadow: 0 2px 3px {{ color_border | color_modify: 'alpha', 0.11 }}; */
   transition: border 100ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 100ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .live-search-form:hover, .live-search--focused .live-search-form {
@@ -13781,9 +13802,9 @@ html body .home-section--content .promo-mosaic--inner.promo-mosaic--compressed .
 }
 
 .live-search-button {
-  color: {{ settings.color_button_text }};
-  background-color: {{ settings.color_button_background }};
-  border: 1px solid {{ settings.color_button_background }};
+  color: black;
+  background-color: transparent;
+  border: none;
   flex-basis: auto;
   flex-grow: 0;
   flex-shrink: 0;
@@ -21167,12 +21188,13 @@ body:not(.user-is-tabbing) .surface-pick-up-embed__modal-btn:focus {
 
 .site-header-actions {
   display: flex;
-  flex: 1 0 auto;
+  /* flex: 1 0 auto; */
   align-items: center;
   padding-left: 0;
   margin-right: 0.625rem;
   font-size: var(--font-size-menu-body-small);
   list-style: none;
+  justify-content: flex-end;
 }
 .site-header-actions li {
   display: inline-block;
@@ -21270,11 +21292,11 @@ body:not(.user-is-tabbing) .surface-pick-up-embed__modal-btn:focus {
     font-weight: {{ fonts_type_body_weight }};
   }
 }
-@media screen and (max-width: 1023px) {
+/* @media screen and (max-width: 1023px) {
   .site-header-actions {
     display: none;
   }
-}
+} */
 
 .site-navigation-wrapper {
   display: none;
@@ -21299,6 +21321,7 @@ body:not(.user-is-tabbing) .surface-pick-up-embed__modal-btn:focus {
 }
 
 .site-navigation {
+  width: 40%;
   display: flex;
   justify-content: space-between;
   background-color: {{ color_header_background }};
@@ -22493,4 +22516,30 @@ body:not(.user-is-tabbing) .rte .tabs .grouped-content-trigger {
   display: block;
   opacity: 1;
   transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.small--hide{
+  display: none !important;  
+}
+.hide{
+  display: none !important;
+}
+.small--show{
+  display: block !important;
+}
+.medium--hide{
+  display: none;
+}
+@media screen and (min-width: 720px) {
+  .small--hide{
+    display: block !important;
+  }
+  .small--show{
+    display: none !important;
+  }
+  
+}
+@media screen and (min-width: 1024px) {
+  .medium--hide{
+    display: block;
+  }
 }

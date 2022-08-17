@@ -97,6 +97,17 @@
     {% endif %}
   {% endunless %}
 
+  <nav
+  class="site-navigation medium--hide"
+  aria-label="{{ 'general.accessibility.nav_main' | t }}"
+>
+  {%
+    render 'navmenu',
+    menu: section.settings.menu,
+    blocks: section.blocks,
+  %}
+  </nav>
+
   <div
     class="
       site-header-main-content
@@ -135,13 +146,6 @@
         {% endif %}
       </a>
     </div>
-
-    {%
-      render 'live-search-form',
-      quick_links: linklists[section.settings.quick_links],
-      enable_images: section.settings.enable_live_search_images,
-      enable_content: section.settings.enable_live_search_articles_pages
-    %}
 
     {% if section.settings.small_promo_text != blank or section.settings.small_promo_heading != blank %}
       {% if section.settings.small_promo_link != blank %}
@@ -202,29 +206,20 @@
   </div>
 
   <div class="site-header-right">
-    {% render 'site-header-actions' %}
+    {%
+      render 'live-search-form',
+      quick_links: linklists[section.settings.quick_links],
+      enable_images: section.settings.enable_live_search_images,
+      enable_content: section.settings.enable_live_search_articles_pages
+    %}
+    {% render 'site-header-actions', section:section %}
 
-    <div class="site-header-cart">
-      <a class="site-header-cart--button" href="{{ routes.cart_url }}">
-        <span
-          class="site-header-cart--count {% if cart.item_count > 0 %}visible{% endif %}"
-          data-header-cart-count="{% if cart.item_count > 0 %}{{ cart.item_count }}{% endif %}">
-        </span>
-        <span class="site-header-cart-icon site-header-cart-icon--svg">
-          {% if section.settings.cart_icon == 'icon-bag' %}
-            {% render 'icon-library', id: 'icon-bag' %}
-          {% else %}
-            {% render 'icon-library', id: 'icon-cart' %}
-           {% endif %}
-        </span>
-        <span class="visually-hidden">{{ 'general.accessibility.cart' | t }}</span>
-      </a>
-    </div>
+
   </div>
 </div>
 
 <div
-  class="
+  class=" hide
     site-navigation-wrapper
     {% if shop.customer_accounts_enabled %}
       site-navigation--has-actions

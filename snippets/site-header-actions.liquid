@@ -13,9 +13,9 @@
             %}
           </span>
           
-          <span class="site-header_account-link-text">
+          <!-- <span class="site-header_account-link-text">
             {{ 'header.account.login' | t }}
-          </span>
+          </span> -->
         </a>
       </li>
     {% else %}
@@ -42,4 +42,20 @@
       </li>
     {% endunless %}
   {% endif %}
+  <li class="site-header-cart">
+    <a class="site-header-cart--button" href="{{ routes.cart_url }}">
+      <span
+        class="site-header-cart--count {% if cart.item_count > 0 %}visible{% endif %}"
+        data-header-cart-count="{% if cart.item_count > 0 %}{{ cart.item_count }}{% endif %}">
+      </span>
+      <span class="site-header-cart-icon site-header-cart-icon--svg">
+        {% if section.settings.cart_icon == 'icon-bag' %}
+          {% render 'icon-library', id: 'icon-bag' %}
+        {% else %}
+          {% render 'icon-library', id: 'icon-cart' %}
+         {% endif %}
+      </span>
+      <span class="visually-hidden">{{ 'general.accessibility.cart' | t }}</span>
+    </a>
+  </li>
 </ul>
