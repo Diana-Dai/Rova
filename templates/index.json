@@ -1,0 +1,220 @@
+{
+  "sections": {
+    "dynamic_slideshow": {
+      "type": "dynamic-slideshow",
+      "blocks": {
+        "slide-2": {
+          "type": "slide",
+          "settings": {
+            "background_image": "shopify:\/\/shop_images\/timothy-buck-psrloDbaZc8-unsplash_1.jpg",
+            "title": "DESIGN-DRIVEN HOME DECOR FOR EVERYONE",
+            "text": "",
+            "color": "#ffffff",
+            "link": "",
+            "text_alignment": "center",
+            "button_one_label": "Shop New Arrivals",
+            "button_one_link": "#",
+            "button_one_style": "primary",
+            "button_two_label": "",
+            "button_two_link": "",
+            "button_two_style": "primary",
+            "show_overlay": true,
+            "overlay_color": "#000000",
+            "overlay_opacity": 4
+          }
+        }
+      },
+      "block_order": [
+        "slide-2"
+      ],
+      "settings": {
+        "enable_autoplay": true,
+        "autoplay_duration": 9,
+        "slideshow_width": "full",
+        "slideshow_height": "fit_screen",
+        "slideshow_height_mobile": "x-large",
+        "slideshow_text_below_image": false
+      }
+    },
+    "16607328596abf2628": {
+      "type": "dynamic-featured-collection",
+      "settings": {
+        "title": "Our essential pieces",
+        "layout": "slideshow",
+        "collection": "new-arrivals",
+        "product_count": 7,
+        "cta_label": "Shop full collection",
+        "cta_button_style": "secondary"
+      }
+    },
+    "dynamic_collection_list": {
+      "type": "dynamic-collection-list",
+      "blocks": {
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "new-arrivals",
+            "image": "shopify:\/\/shop_images\/Group_925.jpg",
+            "title": "Bedroom"
+          }
+        },
+        "collection-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "new-arrivals",
+            "image": "shopify:\/\/shop_images\/Rectangle_597.jpg",
+            "title": "Living Room"
+          }
+        },
+        "collection-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "new-arrivals",
+            "image": "shopify:\/\/shop_images\/Group_928.jpg",
+            "title": "Dining Room"
+          }
+        },
+        "collection-4": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify:\/\/shop_images\/Rectangle_597.jpg",
+            "title": ""
+          }
+        },
+        "collection-5": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify:\/\/shop_images\/Group_928.jpg",
+            "title": ""
+          }
+        },
+        "collection-6": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify:\/\/shop_images\/Group_928.jpg",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection-1",
+        "collection-2",
+        "collection-3",
+        "collection-4",
+        "collection-5",
+        "collection-6"
+      ],
+      "settings": {
+        "title": "Dare to create a space that you can call home.",
+        "thumbnail_columns_desktop": 3,
+        "thumbnail_columns_mobile": 1,
+        "image-crop": "original",
+        "cta_label": "",
+        "cta_link": "",
+        "cta_button_style": "secondary"
+      }
+    },
+    "dynamic_shoppable_image": {
+      "type": "dynamic-shoppable-image",
+      "blocks": {
+        "hotspot-1": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "x_axis": 24,
+            "y_axis": 79
+          }
+        },
+        "hotspot-2": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "x_axis": 64,
+            "y_axis": 67
+          }
+        },
+        "hotspot-3": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "x_axis": 61,
+            "y_axis": 5
+          }
+        },
+        "hotspot-4": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "x_axis": 15,
+            "y_axis": 19
+          }
+        },
+        "hotspot-5": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "x_axis": 87,
+            "y_axis": 48
+          }
+        }
+      },
+      "block_order": [
+        "hotspot-1",
+        "hotspot-2",
+        "hotspot-3",
+        "hotspot-4",
+        "hotspot-5"
+      ],
+      "settings": {
+        "title": "Shop the look",
+        "image_width": "full",
+        "link_text": "View product",
+        "textbox_title": "",
+        "textbox_subheading": "",
+        "textbox_button_label": "",
+        "textbox_button_link": "",
+        "textbox_button_style": "primary",
+        "textbox_text_alignment": "center",
+        "textbox_text_position": "left"
+      }
+    },
+    "16607324817c170318": {
+      "type": "dynamic-image-with-text",
+      "settings": {
+        "section_heading": "",
+        "image": "shopify:\/\/shop_images\/couch-2_b9c966ae-0636-4af3-a324-672daeac67cf_1400x674_crop_center_1.jpg",
+        "crop": "center",
+        "desktop_height": "natural",
+        "mobile_height": "natural",
+        "desktop_image_alignment": "right",
+        "mobile_image_alignment": "top",
+        "heading": "Our goal is to share good design with as many people as possible.",
+        "subheading": "",
+        "text_alignment": "left",
+        "button_label": "Our Story",
+        "button_link": "#"
+      }
+    },
+    "dynamic_blog_posts": {
+      "type": "dynamic-blog-posts",
+      "settings": {
+        "title": "The latest",
+        "blog": "news",
+        "show_date": false,
+        "show_author": false,
+        "show_excerpt": true
+      }
+    }
+  },
+  "order": [
+    "dynamic_slideshow",
+    "16607328596abf2628",
+    "dynamic_collection_list",
+    "dynamic_shoppable_image",
+    "16607324817c170318",
+    "dynamic_blog_posts"
+  ]
+}
