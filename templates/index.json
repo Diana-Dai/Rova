@@ -7,7 +7,7 @@
           "type": "slide",
           "settings": {
             "background_image": "shopify:\/\/shop_images\/timothy-buck-psrloDbaZc8-unsplash_1.jpg",
-            "title": "DESIGN-DRIVEN HOME DECOR FOR EVERYONE",
+            "title": "<p>DESIGN-DRIVEN HOME <\/p><p>DECOR FOR EVERYONE<\/p>",
             "text": "",
             "color": "#ffffff",
             "link": "",
@@ -41,8 +41,8 @@
       "settings": {
         "title": "Our essential pieces",
         "layout": "slideshow",
-        "collection": "new-arrivals",
-        "product_count": 7,
+        "collection": "frontpage",
+        "product_count": 10,
         "cta_label": "Shop full collection",
         "cta_button_style": "secondary"
       }

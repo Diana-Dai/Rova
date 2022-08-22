@@ -27,9 +27,11 @@
 
 <section class="collection-list__container">
   {% if section.settings.title != blank %}
-    <h2 class="home-section--title">
-      {{ section.settings.title | escape }}
-    </h2>
+    <div class="collection-list__title">
+      <h2 class="home-section--title">
+        {{ section.settings.title | escape }}
+      </h2>
+    </div>
   {% endif %}
 
   {% if section.blocks.size > 0 %}

@@ -130,7 +130,24 @@
 {% endif %}
 
 <section class="featured-collection__container" data-featured-collection>
-  {{ title }}
+  <div class="section--top">
+    {{ title }}
+    {% unless disable_cta_button %}
+    {% if section.settings.cta_label != blank %}
+      <a
+        class="
+          button-shop-all
+          featured-collection__button
+        "
+        {% if selected_collection.url != blank %}href="{{ selected_collection.url }}"{% endif %}
+      >
+        {{ section.settings.cta_label | escape }}
+        {% render 'icon-library', id: 'arrow-right' %}
+
+      </a>
+    {% endif %}
+  {% endunless %}
+  </div>
 
   <ul
     class="home-section--content featured-collection__content"
@@ -160,17 +177,5 @@
     {% endif %}
   </ul>
 
-  {% unless disable_cta_button %}
-    {% if section.settings.cta_label != blank %}
-      <a
-        class="
-          button-{{ section.settings.cta_button_style }}
-          featured-collection__button
-        "
-        {% if selected_collection.url != blank %}href="{{ selected_collection.url }}"{% endif %}
-      >
-        {{ section.settings.cta_label | escape }}
-      </a>
-    {% endif %}
-  {% endunless %}
+
 </section>
