@@ -24,6 +24,8 @@
     "overlay_opacity": 50,
     "type_size_base": 20,
     "type_heading": "poppins_n5",
+    "type_size_base": 18,
+    "type_heading": "poppins_n6",
     "type_heading_size": "1.2",
     "type_heading_capitalize": false,
     "type_heading_spacing": 0,
