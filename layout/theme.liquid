@@ -69,6 +69,7 @@
     <link rel="preload" as="style" href="{{ 'theme.css' | asset_url }}">
 
     {{ content_for_header }}
+    <!-- <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"> -->
 
     {{ 'theme.css' | asset_url | stylesheet_tag }}
 
@@ -579,5 +580,11 @@
       defer
     >
     </script>
+
+  <script
+  src="{{ 'custom.js' | asset_url }}"
+  defer
+  ></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js" defer></script>
   </body>
 </html>

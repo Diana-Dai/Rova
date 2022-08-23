@@ -27,8 +27,8 @@
 
 <section class="collection-list__container">
   {% if section.settings.title != blank %}
-    <div class="collection-list__title">
-      <h2 class="home-section--title">
+    <div class="collection-list__title ">
+      <h2 class="home-section--title slideshow-slide__heading">
         {{ section.settings.title | escape }}
       </h2>
     </div>
@@ -42,7 +42,6 @@
         collection--image-crop-{{ section.settings.image-crop }}
         {% if section.settings.cta_label == blank %}no-cta{% endif %}
       "
-      data-layout="grid"
     >
       {% for block in section.blocks %}
         {% assign collection = collections[block.settings.collection] %}
