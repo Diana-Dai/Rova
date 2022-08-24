@@ -29,7 +29,7 @@
   {% if section.settings.title != blank %}
     <div class="collection-list__title ">
       <h2 class="home-section--title slideshow-slide__heading">
-        {{ section.settings.title | escape }}
+        {{ section.settings.title }}
       </h2>
     </div>
   {% endif %}
@@ -83,14 +83,13 @@
 {% schema %}
 {
   "name": "t:sections.collection_list.name",
-  "class": "collection-list--section",
+  "class": "collection-list--section index-section",
   "max_blocks": 20,
   "settings": [
     {
-      "type": "text",
+      "type": "textarea",
       "id": "title",
-      "label": "t:sections.collection_list.title.label",
-      "default": "Collection list"
+      "label": "t:sections.collection_list.title.label"
     },
     {
       "type": "range",

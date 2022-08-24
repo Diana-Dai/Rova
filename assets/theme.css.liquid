@@ -13735,7 +13735,7 @@ html body .home-section--content .promo-mosaic--inner.promo-mosaic--compressed .
   top: -1px;
   right: -1px;
   left: -1px;
-  border-bottom: 1px solid {{color_border}};
+  border-bottom: 1px solid #000;
   /* border: 1px solid {{ color_border | color_modify: 'alpha', 0.2 }}; */
   /* border-radius: 4px; */
   /* box-shadow: 0 2px 3px {{ color_border | color_modify: 'alpha', 0.11 }}; */
@@ -22577,7 +22577,10 @@ body:not(.user-is-tabbing) .rte .tabs .grouped-content-trigger {
 
 /* Dynamic collection list custom css */
 .collection-list__title{
-  height: 20vw;
+  height: 30vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .collection-list__title .slideshow-slide__heading{
   color: white;
@@ -22633,4 +22636,14 @@ opacity: .5;
 .collection-list__container .flickity-prev-next-button {
   bottom: -2.5rem;
   top: initial;
+}
+
+.index-section{
+  margin-top: 90px;
+}
+
+@media screen and (max-width: 719px) {
+  .index-section{
+    margin-top: 30px;
+  }
 }
