@@ -287,80 +287,17 @@
         "title": "Shoppable image"
       }
     },
-    "dynamic_shoppable_image": {
-      "type": "dynamic-shoppable-image",
-      "blocks": {
-        "hotspot-1": {
-          "type": "hotspot",
-          "settings": {
-            "product": "",
-            "x_axis": 24,
-            "y_axis": 79
-          }
-        },
-        "hotspot-2": {
-          "type": "hotspot",
-          "settings": {
-            "product": "",
-            "x_axis": 64,
-            "y_axis": 67
-          }
-        },
-        "hotspot-3": {
-          "type": "hotspot",
-          "settings": {
-            "product": "",
-            "x_axis": 61,
-            "y_axis": 5
-          }
-        },
-        "hotspot-4": {
-          "type": "hotspot",
-          "settings": {
-            "product": "",
-            "x_axis": 15,
-            "y_axis": 19
-          }
-        },
-        "hotspot-5": {
-          "type": "hotspot",
-          "settings": {
-            "product": "",
-            "x_axis": 87,
-            "y_axis": 48
-          }
-        }
-      },
-      "block_order": [
-        "hotspot-1",
-        "hotspot-2",
-        "hotspot-3",
-        "hotspot-4",
-        "hotspot-5"
-      ],
-      "settings": {
-        "title": "Shop the look",
-        "image_width": "full",
-        "link_text": "View product",
-        "textbox_title": "",
-        "textbox_subheading": "",
-        "textbox_button_label": "",
-        "textbox_button_link": "",
-        "textbox_button_style": "primary",
-        "textbox_text_alignment": "center",
-        "textbox_text_position": "left"
-      }
-    },
     "16607324817c170318": {
-      "type": "dynamic-image-with-text",
+      "type": "dynamic-image-with-text_custom",
       "settings": {
+        "background": "#003841",
         "section_heading": "",
         "image": "shopify:\/\/shop_images\/couch-2_b9c966ae-0636-4af3-a324-672daeac67cf_1400x674_crop_center_1.jpg",
         "crop": "center",
         "desktop_height": "natural",
         "mobile_height": "natural",
         "desktop_image_alignment": "right",
-        "mobile_image_alignment": "top",
+        "mobile_image_alignment": "bottom",
         "heading": "Our goal is to share good design with as many people as possible.",
         "subheading": "",
         "text_alignment": "left",
@@ -384,7 +321,6 @@
     "16607328596abf2628",
     "dynamic_collection_list",
     "166139937928a3c6bc",
-    "dynamic_shoppable_image",
     "16607324817c170318",
     "dynamic_blog_posts"
   ]

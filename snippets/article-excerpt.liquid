@@ -78,13 +78,15 @@
         </div>
       {%- endif -%}
 
-      <a class="article--excerpt-readmore" href="{{ article.url }}" aria-label="read {{ article.title }}">
-        {{ 'blog.general.read_more' | t }}
-
-        <span class="article--excerpt-readmore--icon">
-          {% render 'icon-library', id: 'icon-signpost-arrow' %}
-        </span>
-      </a>
+      <div class="article--excerpt-readmore-container">
+        <a class="article--excerpt-readmore" href="{{ article.url }}" aria-label="read {{ article.title }}">
+          {{ 'blog.general.read_more' | t }}
+  
+          <span class="article--excerpt-readmore--icon">
+            {% render 'icon-library', id: 'icon-signpost-arrow' %}
+          </span>
+        </a>
+      </div>
     </div>
   {% else %}
     {%- capture background_image -%}

@@ -28,11 +28,21 @@
 </script>
 
 <section class="blogposts--container blogposts--count-{{ article_count }}">
-  {% if section.settings.title != blank %}
-    <h2 class="home-section--title">
+  <div class="section--top">
+    {% if section.settings.title != blank %}
+    <h2 class="">
       {{ section.settings.title | escape }}
     </h2>
+    
   {% endif %}
+
+  <a class="button-shop-all blogposts--footer-link" href="{{ blog_url }}">
+    {{ 'blog.general.see_more' | t }}
+
+    {% render 'icon-library', id: 'arrow-right' %}
+
+  </a>
+  </div>
 
   <ul class="home-section--content blogposts--inner" data-blog-posts>
     {% if onboarding %}
@@ -52,6 +62,8 @@
     {% endif %}
   </ul>
 
+{%- comment -%}
+
   <div class="blogposts--footer">
     <a class="blogposts--footer-link" href="{{ blog_url }}">
       {{ 'blog.general.see_more' | t }}
@@ -61,12 +73,13 @@
       </span>
     </a>
   </div>
+  {%- endcomment -%}
 </section>
 
 {% schema %}
 {
   "name": "t:sections.blog_posts.name",
-  "class": "blogposts--section",
+  "class": "blogposts--section index-section",
   "settings": [
     {
       "type": "text",
