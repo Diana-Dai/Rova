@@ -2033,7 +2033,7 @@ h4 {
   border: 1px solid {{ settings.color_button_background | color_desaturate: 100 }};
 }
 
-.dynamic-video-wrapper, .navmenu-meganav-wrapper, .site-navigation, .product-section--container, .product-row--container, .productgrid--outer, .pagination--container, .page-content, .page-masthead, .message-banner--outer, .breadcrumbs-container, .atc-banner--outer, .contact-page-content, .account-page-content, .account-page-masthead, .pxs-image-with-text-section, .pxs-newsletter-section, .pxs-map-section, .testimonials-section, .twitter--container, .slideshow--width-content, .shoppable-image, .rich-text--container, .promo-mosaic--container, .promo-grid--container, .page__container, .menulist-container, .logolist--container, .image-with-text, .custom-html--container,
+.shoppable_images,.dynamic-video-wrapper, .navmenu-meganav-wrapper, .site-navigation, .product-section--container, .product-row--container, .productgrid--outer, .pagination--container, .page-content, .page-masthead, .message-banner--outer, .breadcrumbs-container, .atc-banner--outer, .contact-page-content, .account-page-content, .account-page-masthead, .pxs-image-with-text-section, .pxs-newsletter-section, .pxs-map-section, .testimonials-section, .twitter--container, .slideshow--width-content, .shoppable-image, .rich-text--container, .promo-mosaic--container, .promo-grid--container, .page__container, .menulist-container, .logolist--container, .image-with-text, .custom-html--container,
 .custom-liquid--container, .highlights-banner__content, .highlights-banner__container.content-width, .featured-product--container, .featured-collection__container, .collection-list__container, .blogposts--container, .subcollections-banner__container, .subcollections__container, .subcollections-featured-collection__header, .utility-bar__content, .blog--container, .product-compare-container, .product--container, .password-page-footer, .password-page-content--inner, .cart--section, .article--container, .article-image--content-width, .announcement-bar-text-mobile, .announcement-bar-text, .fourohfour--container, .site-footer-item, .site-header-main {
   --layout-container-max-width: {{ max_width | append: 'px' }};
   --layout-container-gutter: 10px;
@@ -2044,7 +2044,7 @@ h4 {
   margin-left: auto;
 }
 @media screen and (min-width: 720px) {
-  .dynamic-video-wrapper, .navmenu-meganav-wrapper, .site-navigation, .product-section--container, .product-row--container, .productgrid--outer, .pagination--container, .page-content, .page-masthead, .message-banner--outer, .breadcrumbs-container, .atc-banner--outer, .contact-page-content, .account-page-content, .account-page-masthead, .pxs-image-with-text-section, .pxs-newsletter-section, .pxs-map-section, .testimonials-section, .twitter--container, .slideshow--width-content, .shoppable-image, .rich-text--container, .promo-mosaic--container, .promo-grid--container, .page__container, .menulist-container, .logolist--container, .image-with-text, .custom-html--container,
+ .shoppable_images, .dynamic-video-wrapper, .navmenu-meganav-wrapper, .site-navigation, .product-section--container, .product-row--container, .productgrid--outer, .pagination--container, .page-content, .page-masthead, .message-banner--outer, .breadcrumbs-container, .atc-banner--outer, .contact-page-content, .account-page-content, .account-page-masthead, .pxs-image-with-text-section, .pxs-newsletter-section, .pxs-map-section, .testimonials-section, .twitter--container, .slideshow--width-content, .shoppable-image, .rich-text--container, .promo-mosaic--container, .promo-grid--container, .page__container, .menulist-container, .logolist--container, .image-with-text, .custom-html--container,
 .custom-liquid--container, .highlights-banner__content, .highlights-banner__container.content-width, .featured-product--container, .featured-collection__container, .collection-list__container, .blogposts--container, .subcollections-banner__container, .subcollections__container, .subcollections-featured-collection__header, .utility-bar__content, .blog--container, .product-compare-container, .product--container, .password-page-footer, .password-page-content--inner, .cart--section, .article--container, .article-image--content-width, .announcement-bar-text-mobile, .announcement-bar-text, .fourohfour--container, .site-footer-item, .site-header-main {
     --layout-container-gutter: 15px;
     padding-right: 15px;
@@ -9472,8 +9472,8 @@ html body .home-section--content .promo-mosaic--inner.promo-mosaic--compressed .
 }
 .shoppable-image__wrapper .pxu-lia-element {
   --slide-fade-translate-y: -40px;
-  animation: slide-fade-y 750ms cubic-bezier(0.4, 0, 0.2, 1) both paused;
-  animation-delay: calc(550ms + 100ms * var(--pxu-lia-outer-sequence) + 100ms * var(--pxu-lia-inner-sequence));
+  /* animation: slide-fade-y 750ms cubic-bezier(0.4, 0, 0.2, 1) both paused; */
+  /* animation-delay: calc(550ms + 100ms * var(--pxu-lia-outer-sequence) + 100ms * var(--pxu-lia-inner-sequence)); */
 }
 
 .shoppable-image__image {
@@ -22581,20 +22581,33 @@ body:not(.user-is-tabbing) .rte .tabs .grouped-content-trigger {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #9f4812;
+}
+.collection-list__title h2{
+  max-width: 800px;
+}
+@media screen and (max-width: 719px) {
+  .collection-list__title{
+    height: 70vw;
+  }
+}
+.collection-list__title .home-section--title{
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .collection-list__title .slideshow-slide__heading{
   color: white;
   font-weight: 600;
 }
-.collection-list--section{
+.collection-content_wrapper{
   position: relative;
 }
-.collection-list__container::before{
+.collection-content_wrapper::before{
   content: "";
   width: 100%;
   background-color: #9f4812;
   display: block;
-  height: 60%;
+  height: 50%;
   position: absolute;
   left: 0;
   top: 0;
@@ -22603,6 +22616,8 @@ body:not(.user-is-tabbing) .rte .tabs .grouped-content-trigger {
 .collection-list__content{
   position: relative;
   outline: none;
+  padding-top: 0;
+  margin-top: 0;
 }
 .collection-list__content .collection__item {
   list-style: none;
@@ -22630,9 +22645,11 @@ body:not(.user-is-tabbing) .rte .tabs .grouped-content-trigger {
   cursor: initial;
 opacity: .5;
 }
+.shoppable_images_carousel .flickity-viewport,
 .collection-list__container .flickity-viewport{
   overflow: hidden;
 }
+.shoppable_images_carousel .flickity-prev-next-button,
 .collection-list__container .flickity-prev-next-button {
   bottom: -2.5rem;
   top: initial;
@@ -22646,4 +22663,25 @@ opacity: .5;
   .index-section{
     margin-top: 30px;
   }
+}
+
+.shoppable_images_carousel {
+  position:relative;
+}
+.flickity-enabled{
+  outline: none;
+}
+
+.shoppable_images_carousel_navigation{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.shoppable_images_carousel_navigation .navigation:not(.is-selected){
+  margin: 0 20px;
+  background: rgba(159, 72, 18, 0.23);
+  border-color: rgba(159, 72, 18, 0.23);
+  color: black;
 }
