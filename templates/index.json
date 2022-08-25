@@ -284,11 +284,11 @@
         "e78bbba8-5fce-4dc4-9456-9e06e58c09b5"
       ],
       "settings": {
+        "title": "Shoppable image"
       }
     },
     "dynamic_shoppable_image": {
       "type": "dynamic-shoppable-image",
-      "disabled": true,
       "blocks": {
         "hotspot-1": {
           "type": "hotspot",

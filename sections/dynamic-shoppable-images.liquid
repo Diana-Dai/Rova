@@ -2,7 +2,9 @@
   {% assign title = section.settings.title %}
 
   {% if title != blank %}
-    <h2 class="shoppable-image__section-heading">{{ title | escape }}</h2>
+    <div class="section--top">
+      <h3 class="shoppable_images__title h2 text-center">{{ title | escape }}</h2>
+    </div>
   {% endif %}
 
   <div class="shoppable_images_carousel_navigation">
@@ -39,7 +41,12 @@
     {% assign show_tooltip_image = true %}
     {% assign show_vendor = settings.product_show_vendor %}
     {% assign show_compare_at_price = true %}
+    {%- comment -%}
     {% assign show_sale_badge = settings.product_sales_badge %}
+    
+    {%- endcomment -%}
+    {% assign show_sale_badge = false %}
+
     {% assign include_range = true %}
     {% assign show_range = true %}
     {% assign sales_badge_style = settings.product_sales_badge_style %}
@@ -2484,36 +2491,14 @@
     {% comment %}Inject @pixelunion/pxs-shoppable-image/dynamic-shoppable-image end{% endcomment %}
     
     
-    <div class="hotspot__modal"
-      data-hotspot-modal-id="{{ block.id }}"
-    >
-      <div class="hotspot__modal-wrapper"
-        data-hotspot-section-id="{{ block.id }}"
-      >
-        <div class="hotspot__modal-sidebar" data-hotspot-modal-sidebar>
-          <div class="hotspot__modal-sidebar-content" data-hotspot-modal-sidebar-content>
-            </div>
-          <span class="hotspot__modal-sidebar-arrow" data-sidebar-arrow>
-            <span class="hotspot__modal-sidebar-icon"></span>
-          </span>
-        </div>
-          <div
-            class="hotspot__modal-quickshop"
-            data-hotspot-modal-quickshop
-            data-product-quickshop
-          >
-            {% render 'quick-shop' %}
-          </div>
-      </div>
-    </div>
+
   </div>
 
     {% endfor %}
   </div>
 
-
-
 </section>
+
 {% schema %}
 {
   "name": "Shoppable Images",

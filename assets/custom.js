@@ -1,12 +1,14 @@
 window.onload = function () {
 
     $('.collection-list__content').flickity({
-      cellAlign: 'left'
+      cellAlign: 'left',
+      groupCells: true
     });
 
     // shop the look
     var shop_the_look_flkty = $('.shoppable_images_carousel').flickity({
-      cellAlign: 'left'
+      cellAlign: 'left',
+      groupCells: true
     });
 
     $(document).on('click','.shoppable_images_carousel_navigation .navigation',function () {  
