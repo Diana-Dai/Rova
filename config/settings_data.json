@@ -139,24 +139,32 @@
           "static-footer-0": {
             "type": "menu",
             "settings": {
-              "menu": "main-menu"
+              "menu": "collections"
             }
           },
           "1498182586280": {
             "type": "menu",
             "settings": {
-              "menu": "main-menu"
+              "menu": "about"
             }
           },
           "1498182572847": {
             "type": "menu",
             "settings": {
-              "menu": "main-menu"
+              "menu": "shopping-with-us"
             }
           },
           "1493171899575": {
             "type": "social_accounts",
+            "disabled": true,
             "settings": {
+            }
+          },
+          "d78c4f0a-8a80-4fea-ba41-494d6e7c41a4": {
+            "type": "newsletter",
+            "settings": {
+              "title": "KEEP UP WITH ROVA",
+              "text": "<p>Subscribe to ROVA newsletter and offers.<\/p>"
             }
           }
         },
@@ -164,7 +172,8 @@
           "static-footer-0",
           "1498182586280",
           "1498182572847",
-          "1493171899575"
+          "1493171899575",
+          "d78c4f0a-8a80-4fea-ba41-494d6e7c41a4"
         ],
         "settings": {
           "payment_icons": false,

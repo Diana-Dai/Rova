@@ -14,9 +14,11 @@
 
 {% if has_social_icons %}
   {% if context == 'footer' %}
+{%- comment -%}
     <h2 class="site-footer-block-title">
       {{ 'footer.general.follow_us' | t }}
     </h2>
+{%- endcomment -%}
 
     <div class="site-footer-block-content">
   {% endif %}

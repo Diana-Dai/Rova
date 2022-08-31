@@ -207,7 +207,7 @@
   },
   "footer": {
     "general": {
-      "copyright_html": "Copyright &copy; {{ year }} {{ shop_name }}.",
+      "copyright_html": "&copy; {{ year }} {{ shop_name }}.",
       "follow_us": "Follow us"
     }
   },

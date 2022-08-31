@@ -45,6 +45,10 @@
         form_id: form_id,
         input_id: 'footer_newsletter_email'
       %}
+      {%
+        render 'social-list',
+        context: 'footer',
+      %}
     {% endif %}
   {% elsif block.type == 'social_accounts' %}
     {%
