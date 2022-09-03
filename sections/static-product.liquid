@@ -28,9 +28,9 @@
   }
 </script>
 
-{% render 'breadcrumbs' %}
 
 <section class="product--container" data-product-wrapper>
+{% render 'breadcrumbs' %}
   {%
     render 'product',
     is_product_modal: false,
@@ -42,6 +42,9 @@
     gallery_click_to_zoom: section.settings.gallery_click_to_zoom,
     gallery_hover_zoom: section.settings.gallery_hover_zoom
   %}
+
+  <!-- Banner -->
+  {% render 'banner', product:product %}
 </section>
 
 {% schema %}

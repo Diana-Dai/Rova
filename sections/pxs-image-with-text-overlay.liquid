@@ -91,11 +91,26 @@
   </div>
 </section>
 
+<style>
+  {% if section.settings.full_width == true %}
+  .pxs-image-with-text-section{
+    max-width: initial !important;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  {% endif %}
+</style>  
 {% schema %}
 {
   "name": "t:sections.image_with_text_overlay.name",
   "class": "pxs-image-with-text-section",
   "settings": [
+  {
+    "type": "checkbox",
+    "id": "full_width",
+    "label": "Full Width",
+    "default": false
+    },
     {
       "type": "select",
       "id": "section_height",

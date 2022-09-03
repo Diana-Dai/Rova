@@ -1,0 +1,58 @@
+{% if product.metafields.custom.banner_image != blank  %}
+<section
+  class=" product-banner
+    pxs-image-with-text
+    pxs-image-with-text-section-height-original
+  "
+>
+  <div class="pxs-image-with-text-wrapper">
+    <div
+      class="pxs-image-with-text-background">
+      <img style="width: 100%;"
+      src="{{ product.metafields.custom.banner_image | img_url: '1024x' }}"
+      alt="{{ product.metafields.custom.banner_image.alt | escape }}"
+      width="{{ product.metafields.custom.banner_image.width }}"
+      height="{{ product.metafields.custom.banner_image.height }}"
+      loading="lazy"
+    >
+    </div>
+
+    <div
+      class="
+        pxs-image-with-text-content-wrapper
+        pxs-image-with-text-content-position-y-center
+        pxs-image-with-text-content-position-x-center
+      "
+    >
+        <div
+          class="pxs-image-with-text-content"
+         
+        >
+        {% if product.metafields.custom.banner_title != blank %}
+          <h2
+            class="pxs-image-with-text-heading"
+          >
+            {{ product.metafields.custom.banner_title }}
+          </h2>
+        {% endif %}
+        </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.product-banner{
+    margin-top: 30px;
+    color: white;
+
+
+}
+@media (min-width: 720px) {
+    .product-banner{
+    margin-top: 70px;
+        margin-left: -25px;
+    margin-right: -25px;
+}
+}
+</style>
+{% endif %}
