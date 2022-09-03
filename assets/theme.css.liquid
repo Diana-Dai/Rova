@@ -4207,7 +4207,8 @@ body .mdc-ripple-surface:hover:before {
 .site-footer-wrapper .navmenu-link:hover,
 .site-footer-wrapper .site-footer-credits a:hover,
 .site-footer-wrapper .rte a:hover {
-  color: {{ color_footer_link }};
+  color: {{ settings.color_button_background }};
+
 }
 .site-footer-wrapper .rte a {
   text-decoration: underline;
@@ -15154,6 +15155,10 @@ html body .home-section--content .promo-mosaic--inner.promo-mosaic--compressed .
 }
 
 .productitem--info {
+  display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
   margin: 0 {{ space_xxx_small | divided_by: 16.0 | append: 'rem' }};
 }
 @media screen and (min-width: 1024px) {
@@ -15164,7 +15169,7 @@ html body .home-section--content .promo-mosaic--inner.promo-mosaic--compressed .
 
 .productitem__badge {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: auto;
   height: auto;
@@ -15440,7 +15445,6 @@ html body .home-section--content .promo-mosaic--inner.promo-mosaic--compressed .
   font-size: var(--font-size-body-smaller);
   font-family: {{ fonts_type_body_family }};
   font-style: {{ fonts_type_body_style }};
-  font-weight: {{ fonts_type_body_weight_bolder }};
   position: absolute;
   align-items: center;
   justify-content: center;
@@ -21403,10 +21407,13 @@ body:not(.user-is-tabbing) .surface-pick-up-embed__modal-btn:focus {
   vertical-align: top;
 }
 .site-navigation .navmenu-depth-1 > li > a {
+  outline: none;
   transition: opacity 200ms cubic-bezier(0, 0, 0.2, 1);
 }
+.navmenu-link-active,
 .site-navigation .navmenu-depth-1 > li > a:hover, .site-navigation .navmenu-depth-1 > li > a[aria-expanded=true] {
-  opacity: 0.8;
+  color: {{ settings.color_button_background }} !important;
+  outline:none;
 }
 .site-navigation .site-navigation__secondary-menu {
   justify-content: flex-end;
@@ -21453,12 +21460,12 @@ body:not(.user-is-tabbing) .surface-pick-up-embed__modal-btn:focus {
 }
 .site-navigation .navmenu-link-depth-1:focus,
 .site-navigation .site-header-account-link a:focus {
-  outline: solid {{ settings.color_header_text | color_modify: 'alpha', 0.5 }};
-  outline-offset: -5px;
+  /* outline: solid {{ settings.color_header_text | color_modify: 'alpha', 0.5 }}; */
+  /* outline-offset: -5px; */
 }
 .site-navigation .navmenu-link-depth-1.navmenu-item-active:focus,
 .site-navigation .site-header-account-link a.navmenu-item-active:focus {
-  outline: none;
+  /* outline: none; */
 }
 .site-navigation .navmenu-basic__item .navmenu-icon {
   position: absolute;
