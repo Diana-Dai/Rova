@@ -40,7 +40,7 @@
     "layout_max_width": 1400,
     "product_sales_badge": true,
     "product_sales_badge_style": "text",
-    "inventory_status": true,
+    "inventory_status": false,
     "product_option_style": "radio",
     "sold_out_options": "disabled",
     "enable_cart_redirection": true,
