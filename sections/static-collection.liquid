@@ -120,44 +120,49 @@
   {% endif %}
 {%- endcapture -%}
 
-{% render 'breadcrumbs' %}
 
 {% paginate collection.products by paginate_by %}
-  <div class="productgrid--outer {{ collection_classes | strip_newlines }}" data-productgrid-outer>
-    <div class="productgrid--masthead">
+<div class="productgrid--masthead">
 
-      {% if section.settings.show_collection_image and collection.image %}
-        <figure class="collection--image">
-          {%
-            render 'rimg',
-            img: collection.image,
-            size: '1350x',
-            lazy: true,
-            canvas: true
-          %}
-        </figure>
-      {% endif %}
+  {% if section.settings.show_collection_image and collection.image %}
+    <figure class="collection--image">
+      {%
+        render 'rimg',
+        img: collection.image,
+        size: '1350x',
+        lazy: true,
+        canvas: true
+      %}
+    </figure>
+  {% endif %}
 
+    <div class="figure-content">
       <h1 class="collection--title">
         {{ collection.title }}
       </h1>
-
+    
       {% if collection.description != blank %}
         <div class="collection--description rte" data-collection-description>
           {{ collection.description }}
         </div>
       {% endif %}
-
-      {% if section.settings.enable_subcollection and linklists[collection.handle].links.size > 0 %}
-        {%
-          render 'subcollections-collection',
-          type: 'block',
-          block: section,
-          layout_type: 'slideshow',
-        %}
-        <div class="subcollections-collection__border"></div>
-      {% endif %}
     </div>
+
+
+</div>
+  <div class="productgrid--outer {{ collection_classes | strip_newlines }}" data-productgrid-outer>
+    {% if section.settings.enable_subcollection and linklists[collection.handle].links.size > 0 %}
+    {%
+      render 'subcollections-collection',
+      type: 'block',
+      block: section,
+      layout_type: 'slideshow',
+    %}
+    <div class="subcollections-collection__border"></div>
+  {% endif %}
+
+    {% render 'breadcrumbs' %}
+
     {% if show_sidebar %}
       {%
         render 'product-grid-sidebar',
@@ -166,7 +171,7 @@
       %}
     {% endif %}
 
-    <div class="productgrid--wrapper">
+    <div class="productgrid--wrapper ">
 
       {% if show_filter_trigger or section.settings.sort_by or section.settings.grid_list %}
         {% capture utility_class %}
