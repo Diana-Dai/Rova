@@ -43,9 +43,14 @@
     gallery_hover_zoom: section.settings.gallery_hover_zoom
   %}
 
+
+</section>
+
   <!-- Banner -->
   {% render 'banner', product:product %}
-</section>
+  <!-- Gallery -->
+  {% render 'gallery', product:product %}
+  {% render 'specification', product:product %}
 
 {% schema %}
 {

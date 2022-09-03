@@ -1,0 +1,171 @@
+<section class="product-gallery product--container">
+    {% if product.metafields.custom.gallery_1_image != blank %}
+        <div class="product-gallery__item">
+            <figure>
+                <div class="image_wrappper">
+                    {%- assign image = product.metafields.custom.gallery_1_image -%}
+                    <img style="width: 100%;"
+                        src="{{ image | img_url: '1024x' }}"
+                        srcset="
+                        {% if image.width > 640 %}{{ image.src | img_url: '640x' }} 640w{% endif %}
+                        {% if image.width > 720 %},{{ image.src | img_url: '720x' }} 720w{% endif %}
+                        {% if image.width > 900 %},{{ image.src | img_url: '900x' }} 900w{% endif %} 
+                        {% if image.width > 1000 %},{{ image.src | img_url: '1000x' }} 1000w{% endif %} 
+                        {% if image.width > 1500 %},{{ image.src | img_url: '1500x' }} 1500w{% endif %} 
+                        " 
+                        sizes="(min-width: 960px) 450px, (min-width: 720px) 50vw, 100vw"
+                        alt="{{ image.alt | escape }}"
+                        width="{{ image.width }}"
+                        height="{{ image.height }}"
+                        loading="lazy"
+                        >
+                </div>
+                <figcaption>
+                    <h4>{{product.metafields.custom.gallery_1_title}}</h4>
+                    <div class="content">{{product.metafields.custom.gallery_1_text}}</div>
+                </figcaption>
+            </figure>
+        </div>
+    {% endif %}
+    {% if product.metafields.custom.gallery_2_image != blank %}
+        <div class="product-gallery__item">
+            <figure>
+                <div class="image_wrappper">
+                    {%- assign image = product.metafields.custom.gallery_2_image -%}
+                    <img style="width: 100%;"
+                        src="{{ image | img_url: '1024x' }}"
+                        srcset="
+                        {% if image.width > 640 %}{{ image.src | img_url: '640x' }} 640w{% endif %}
+                        {% if image.width > 720 %},{{ image.src | img_url: '720x' }} 720w{% endif %}
+                        {% if image.width > 900 %},{{ image.src | img_url: '900x' }} 900w{% endif %} 
+                        {% if image.width > 1000 %},{{ image.src | img_url: '1000x' }} 1000w{% endif %} 
+                        {% if image.width > 1500 %},{{ image.src | img_url: '1500x' }} 1500w{% endif %} 
+                        " 
+                        sizes="(min-width: 960px) 450px, (min-width: 720px) 50vw, 100vw"
+                        alt="{{ image.alt | escape }}"
+                        width="{{ image.width }}"
+                        height="{{ image.height }}"
+                        loading="lazy"
+                        >
+                </div>
+                <figcaption>
+                    <h4>{{product.metafields.custom.gallery_2_title}}</h4>
+                    <div class="content">{{product.metafields.custom.gallery_2_text}}</div>
+                </figcaption>
+            </figure>
+        </div>
+    {% endif %}
+    {% if product.metafields.custom.gallery_3_imgae != blank %}
+        <div class="product-gallery__item">
+            <figure>
+                <div class="image_wrappper">
+                    {%- assign image = product.metafields.custom.gallery_3_imgae -%}
+                    <img style="width: 100%;"
+                        src="{{ image | img_url: '1024x' }}"
+                        srcset="
+                        {% if image.width > 640 %}{{ image.src | img_url: '640x' }} 640w{% endif %}
+                        {% if image.width > 720 %},{{ image.src | img_url: '720x' }} 720w{% endif %}
+                        {% if image.width > 900 %},{{ image.src | img_url: '900x' }} 900w{% endif %} 
+                        {% if image.width > 1000 %},{{ image.src | img_url: '1000x' }} 1000w{% endif %} 
+                        {% if image.width > 1500 %},{{ image.src | img_url: '1500x' }} 1500w{% endif %} 
+                        " 
+                        sizes="(min-width: 960px) 450px, (min-width: 720px) 50vw, 100vw"
+                        alt="{{ image.alt | escape }}"
+                        width="{{ image.width }}"
+                        height="{{ image.height }}"
+                        loading="lazy"
+                        >
+                </div>
+                <figcaption>
+                    <h4>{{product.metafields.custom.gallery_3_title}}</h4>
+                    <div class="content">{{product.metafields.custom.gallery_3_text}}</div>
+                </figcaption>
+            </figure>
+        </div>
+    {% endif %}
+    {% if product.metafields.custom.gallery_4_image != blank %}
+        <div class="product-gallery__item">
+            <figure>
+                <div class="image_wrappper">
+                    {%- assign image = product.metafields.custom.gallery_4_image -%}
+                    <img style="width: 100%;"
+                        src="{{ image | img_url: '1024x' }}"
+                        srcset="
+                        {% if image.width > 640 %}{{ image.src | img_url: '640x' }} 640w{% endif %}
+                        {% if image.width > 720 %},{{ image.src | img_url: '720x' }} 720w{% endif %}
+                        {% if image.width > 900 %},{{ image.src | img_url: '900x' }} 900w{% endif %} 
+                        {% if image.width > 1000 %},{{ image.src | img_url: '1000x' }} 1000w{% endif %} 
+                        {% if image.width > 1500 %},{{ image.src | img_url: '1500x' }} 1500w{% endif %} 
+                        " 
+                        sizes="(min-width: 960px) 450px, (min-width: 720px) 50vw, 100vw"
+                        alt="{{ image.alt | escape }}"
+                        width="{{ image.width }}"
+                        height="{{ image.height }}"
+                        loading="lazy"
+                        >
+                </div>
+                <figcaption>
+                    <h4>{{product.metafields.custom.gallery_4_title}}</h4>
+                    <div class="content">{{product.metafields.custom.gallery_4_text}}</div>
+                </figcaption>
+            </figure>
+        </div>
+    {% endif %}
+    {% if product.metafields.custom.gallery_5_image != blank %}
+        <div class="product-gallery__item">
+            <figure>
+                <div class="image_wrappper">
+                    {%- assign image = product.metafields.custom.gallery_5_image -%}
+                    <img style="width: 100%;"
+                        src="{{ image | img_url: '1024x' }}"
+                        srcset="
+                        {% if image.width > 640 %}{{ image.src | img_url: '640x' }} 640w{% endif %}
+                        {% if image.width > 720 %},{{ image.src | img_url: '720x' }} 720w{% endif %}
+                        {% if image.width > 900 %},{{ image.src | img_url: '900x' }} 900w{% endif %} 
+                        {% if image.width > 1000 %},{{ image.src | img_url: '1000x' }} 1000w{% endif %} 
+                        {% if image.width > 1500 %},{{ image.src | img_url: '1500x' }} 1500w{% endif %} 
+                        " 
+                        sizes="(min-width: 960px) 450px, (min-width: 720px) 50vw, 100vw"
+                        alt="{{ image.alt | escape }}"
+                        width="{{ image.width }}"
+                        height="{{ image.height }}"
+                        loading="lazy"
+                        >
+                </div>
+                <figcaption>
+                    <h4>{{product.metafields.custom.gallery_5_title}}</h4>
+                    <div class="content">{{product.metafields.custom.gallery_5_text}}</div>
+                </figcaption>
+            </figure>
+        </div>
+    {% endif %}
+    {% if product.metafields.custom.gallery_6_image != blank %}
+        <div class="product-gallery__item">
+            <figure>
+                <div class="image_wrappper">
+                    {%- assign image = product.metafields.custom.gallery_6_image -%}
+                    <img style="width: 100%;"
+                        src="{{ image | img_url: '1024x' }}"
+                        srcset="
+                        {% if image.width > 640 %}{{ image.src | img_url: '640x' }} 640w{% endif %}
+                        {% if image.width > 720 %},{{ image.src | img_url: '720x' }} 720w{% endif %}
+                        {% if image.width > 900 %},{{ image.src | img_url: '900x' }} 900w{% endif %} 
+                        {% if image.width > 1000 %},{{ image.src | img_url: '1000x' }} 1000w{% endif %} 
+                        {% if image.width > 1500 %},{{ image.src | img_url: '1500x' }} 1500w{% endif %} 
+                        " 
+                        sizes="(min-width: 960px) 450px, (min-width: 720px) 50vw, 100vw"
+                        alt="{{ image.alt | escape }}"
+                        width="{{ image.width }}"
+                        height="{{ image.height }}"
+                        loading="lazy"
+                        >
+                </div>
+                <figcaption>
+                    <h4>{{product.metafields.custom.gallery_6_title}}</h4>
+                    <div class="content">{{product.metafields.custom.gallery_6_text}}</div>
+                </figcaption>
+            </figure>
+        </div>
+    {% endif %}
+
+</section>

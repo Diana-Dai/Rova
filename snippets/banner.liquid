@@ -6,15 +6,25 @@
   "
 >
   <div class="pxs-image-with-text-wrapper">
+    {%- assign image = product.metafields.custom.banner_image -%}
     <div
       class="pxs-image-with-text-background">
       <img style="width: 100%;"
-      src="{{ product.metafields.custom.banner_image | img_url: '1024x' }}"
-      alt="{{ product.metafields.custom.banner_image.alt | escape }}"
-      width="{{ product.metafields.custom.banner_image.width }}"
-      height="{{ product.metafields.custom.banner_image.height }}"
+      src="{{ image | img_url: '1024x' }}"
+      srcset="
+      {% if image.width > 640 %}{{ image.src | img_url: '640x' }} 640w{% endif %}
+      {% if image.width > 720 %},{{ image.src | img_url: '720x' }} 720w{% endif %}
+      {% if image.width > 900 %},{{ image.src | img_url: '900x' }} 900w{% endif %} 
+      {% if image.width > 1000 %},{{ image.src | img_url: '1000x' }} 1000w{% endif %} 
+      {% if image.width > 1500 %},{{ image.src | img_url: '1500x' }} 1500w{% endif %} 
+      " 
+      sizes="(min-width: 960px) 450px, (min-width: 720px) 50vw, 100vw"
+      alt="{{ image.alt | escape }}"
+      width="{{ image.width }}"
+      height="{{ image.height }}"
       loading="lazy"
     >
+
     </div>
 
     <div
@@ -44,8 +54,6 @@
 .product-banner{
     margin-top: 30px;
     color: white;
-
-
 }
 @media (min-width: 720px) {
     .product-banner{
