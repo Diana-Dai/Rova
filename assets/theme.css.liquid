@@ -2377,7 +2377,8 @@ h4 {
   border: 1px solid {{ settings.color_button_secondary_border }};
 }
 .button-secondary:not(.disabled):hover {
-  background: {{ color_background | color_mix: settings.color_button_secondary_background, 20 }};
+  color:white;
+  background: {{ color_button_secondary_border_hover }};
   border: 1px solid {{ color_button_secondary_border_hover }};
 }
 .button-secondary.mdc-ripple-surface.mdc-ripple-upgraded {
