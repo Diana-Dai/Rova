@@ -5131,12 +5131,14 @@ body .mdc-ripple-surface:hover:before {
 
 .collection--title {
   font-size: var(--font-size-heading-large);
-{% comment %}   margin: {{ space_large | divided_by: 16.0 | append: 'rem' }} 0 {{ space_x_small | divided_by: 16.0 | append: 'rem' }}; {% endcomment %}
+  
+ margin: {{ space_large | divided_by: 16.0 | append: 'rem' }} 0 {{ space_x_small | divided_by: 16.0 | append: 'rem' }};
   line-height: 1.3;
   color: {{ settings.color_headings }};
 }
 @media screen and (max-width: 719px){
 .collection--title {
+margin-bottom:0;
 font-size: var(--font-size-heading-4);
 }
 .collection--description{
