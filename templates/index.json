@@ -309,7 +309,7 @@
       "type": "dynamic-blog-posts",
       "settings": {
         "title": "The latest",
-        "blog": "news",
+        "blog": "the-latest",
         "show_date": false,
         "show_author": false,
         "show_excerpt": true
