@@ -34,7 +34,7 @@
       {% endif %}
     {% endcapture %}
     {% assign background_image = block.settings.image %}
-    {% assign tooltip_link_text = block.settings.link_text %}
+    {% assign tooltip_link_text = block.settings.link_text  %}
     {% assign x_axis_id = 'x_axis' %}
     {% assign y_axis_id = 'y_axis' %}
     {% assign hotspot_product_id = 'product' %}
@@ -619,11 +619,9 @@
     
                   </div>
     
-                  {% if tooltip_link_text != blank %}
                     <div class="hotspot__tooltip-link">
                       {{ tooltip_link_text }}
                     </div>
-                  {% endif %}
                 </div>
               </a>
             </div>
@@ -1079,11 +1077,9 @@
     
               </div>
     
-              {% if tooltip_link_text != blank %}
                 <div class="hotspot__tooltip-link">
                   {{ tooltip_link_text }}
                 </div>
-              {% endif %}
             </div>
           </a>
         </div>
@@ -1539,11 +1535,9 @@
     
               </div>
     
-              {% if tooltip_link_text != blank %}
                 <div class="hotspot__tooltip-link">
                   {{ tooltip_link_text }}
                 </div>
-              {% endif %}
             </div>
           </a>
         </div>
@@ -1999,11 +1993,9 @@
     
               </div>
     
-              {% if tooltip_link_text != blank %}
                 <div class="hotspot__tooltip-link">
                   {{ tooltip_link_text }}
                 </div>
-              {% endif %}
             </div>
           </a>
         </div>
@@ -2458,11 +2450,9 @@
     
               </div>
     
-              {% if tooltip_link_text != blank %}
                 <div class="hotspot__tooltip-link">
                   {{ tooltip_link_text }}
                 </div>
-              {% endif %}
             </div>
           </a>
         </div>
