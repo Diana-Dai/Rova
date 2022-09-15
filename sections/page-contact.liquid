@@ -1,10 +1,5 @@
 <article class="site-page" data-template-page data-template-contact>
 
-  <header class="page-masthead">
-    <h1 class="page-title">
-      {{ page.title }}
-    </h1>
-  </header>
   {% form 'contact' %}
 
     {% if page.content != blank %}
@@ -53,10 +48,11 @@
             id="contact_name"
             name="contact[name]"
             type="text"
+            required
             value="{{ value }}">
 
           <label class="form-field-title" for="contact_name">
-            {{ 'contact.form.name' | t }}
+            {{ 'contact.form.name' | t }} *
           </label>
         </div>
 
@@ -72,12 +68,13 @@
             id="contact_email"
             name="contact[email]"
             type="text"
+            required
             value="{{ value }}"
             autocorrect="off"
             autocapitalize="off">
 
           <label class="form-field-title" for="contact_email">
-            {{ 'contact.form.email' | t }}
+            {{ 'contact.form.email' | t }}*
           </label>
         </div>
       </div>
@@ -110,10 +107,10 @@
         <textarea
           class="form-field-input form-field-textarea {% if form.errors contains 'body' %}form-field-error{% endif %}"
           id="contact_message"
-          name="contact[message]">{{ value }}</textarea>
+          name="contact[message]" required>{{ value }}</textarea>
 
         <label class="form-field-title" for="contact_body">
-          {{ 'contact.form.message' | t }}
+          {{ 'contact.form.message' | t }}*
         </label>
       </div>
 
