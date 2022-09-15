@@ -1,12 +1,86 @@
 {
-    "sections": {
-      "main": {
-        "type": "page",
-        "settings": {
-        }
+  "sections": {
+    "main": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
       }
     },
-    "order": [
-      "main"
-    ]
-  }
+    "1663212053c2eab158": {
+      "type": "pxs-image-with-text-overlay",
+      "settings": {
+        "full_width": true,
+        "section_height": "medium",
+        "image": "shopify:\/\/shop_images\/image_231.jpg",
+        "position": "center center",
+        "title": "MEET ROVA",
+        "text": "<p>We are a design-driven interior brand, offering contemporary decor and home accessories to complement every style and room.<\/p>",
+        "content_position": "center-center",
+        "color": "#ffffff",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "link": "",
+        "button_text": ""
+      }
+    },
+    "1663220511d400bb33": {
+      "type": "dynamic-image-with-text_about",
+      "settings": {
+        "background": "",
+        "section_heading": "",
+        "image": "shopify:\/\/shop_images\/Rectangle_622.jpg",
+        "crop": "center",
+        "desktop_height": "natural",
+        "mobile_height": "natural",
+        "desktop_image_alignment": "right",
+        "mobile_image_alignment": "top",
+        "subheading": "<p>OUR MISSION<\/p>",
+        "heading": "<p>Affordable <\/p><p>Luxury for <\/p><p>Beautiful Living<\/p>",
+        "content": "<p>Our goal is to share good design with as many people as possible. We spend our days meticulously curating a thoughtful selection of pieces which are at the intersection of form and function. <br\/><br\/>With its clean lines and natural color<br\/>palette, our collections carefully reflect our design ethos - creating purposeful, elevated, yet well-priced home decor for everyone.<br\/> <br\/><br\/><\/p>",
+        "text_alignment": "left",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
+    "166322136793323c4b": {
+      "type": "dynamic-image-with-text_about",
+      "settings": {
+        "background": "#f4f5f0",
+        "section_heading": "",
+        "image": "shopify:\/\/shop_images\/Rectangle_622.jpg",
+        "crop": "center",
+        "desktop_height": "natural",
+        "mobile_height": "natural",
+        "desktop_image_alignment": "left",
+        "mobile_image_alignment": "top",
+        "subheading": "<p>OUR VISION<\/p>",
+        "heading": "<p>Empowering <\/p><p>you to elevate <\/p><p>your space<\/p>",
+        "content": "<p>Whether you’re looking to furnish your first home, a luxury estate, a rural retreat, or a bite-sized condo, we empower you to elevate your space. <br\/><br\/>Dare to create a space which is<br\/>uniquely yours, a space in which you can flourish and express yourself, a space in which you can feel right at home.<\/p>",
+        "text_alignment": "left",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
+    "16632223831d11fe5d": {
+      "type": "dynamic-rich-text_about",
+      "settings": {
+        "background": "#9f4812",
+        "width": "regular",
+        "title": "<p>Ready to start designing your room with us?<\/p>",
+        "text": "",
+        "button_label": "Start Shopping",
+        "button_link": "shopify:\/\/collections\/new-arrivals",
+        "description": "<p>Have questions? Contact us <a href=\"\/pages\/contact\" title=\"Contact\">here<\/a><\/p>",
+        "heading_size": "large",
+        "text_alignment": "center"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1663212053c2eab158",
+    "1663220511d400bb33",
+    "166322136793323c4b",
+    "16632223831d11fe5d"
+  ]
+}

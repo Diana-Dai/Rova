@@ -99,7 +99,7 @@
 
   </head>
 
-  <body class="template-{{ template.name }}" data-instant-allow-query-string {% if settings.reduce_animations %}data-reduce-animations{% endif %}>
+  <body class="{{ template | replace: '.', '-' }} template-{{ template.name }}" data-instant-allow-query-string {% if settings.reduce_animations %}data-reduce-animations{% endif %}>
     <script>
       document.documentElement.className=document.documentElement.className.replace(/\bno-js\b/,'js');
       if(window.Shopify&&window.Shopify.designMode)document.documentElement.className+=' in-theme-editor';
