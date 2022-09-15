@@ -1,6 +1,6 @@
 window.onload = function () {
 
-    $('.collection-list__content').flickity({
+    $('.collection-list--section .collection-list__content').flickity({
       cellAlign: 'left',
       groupCells: true
     });
