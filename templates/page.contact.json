@@ -1,5 +1,22 @@
 {
   "sections": {
+    "1663226037653a7d45": {
+      "type": "pxs-image-with-text-overlay",
+      "settings": {
+        "full_width": true,
+        "section_height": "medium",
+        "image": "shopify:\/\/shop_images\/Group_1004.jpg",
+        "position": "center center",
+        "title": "Contact us",
+        "text": "<p> If you have any questions, don't hesitate to get in touch with us! We're here to help.<\/p>",
+        "content_position": "center-center",
+        "color": "#ffffff",
+        "overlay_background": "#000000",
+        "overlay_opacity": 20,
+        "link": "",
+        "button_text": ""
+      }
+    },
     "main": {
       "type": "page-contact",
       "settings": {
@@ -7,6 +24,7 @@
     }
   },
   "order": [
+    "1663226037653a7d45",
     "main"
   ]
 }
